@@ -3,6 +3,7 @@ LABEL maintainer="jakub@ittools.pl"
 
 RUN apt-get update \
     && apt-get install --yes --no-install-recommends \
+        php8.0-xml \
         php8.0-fpm \
     && apt-get autoremove --yes \
     && apt-get clean --yes \
