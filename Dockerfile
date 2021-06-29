@@ -8,4 +8,4 @@ RUN apt-get update \
     && apt-get clean --yes \
     && rm --recursive --force /var/lib/apt/lists/*
 
-RUN curl --show-error --silent https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+ENTRYPOINT ["/usr/sbin/php-fpm8.0", "--nodaemonize"]
