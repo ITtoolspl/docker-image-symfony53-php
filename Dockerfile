@@ -8,4 +8,6 @@ RUN apt-get update \
     && apt-get clean --yes \
     && rm --recursive --force /var/lib/apt/lists/*
 
+RUN mkdir -p /run/php
+
 ENTRYPOINT ["/usr/sbin/php-fpm8.0", "--nodaemonize"]
