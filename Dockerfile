@@ -10,4 +10,4 @@ RUN apt-get update \
 
 RUN mkdir -p /run/php
 
-ENTRYPOINT ["/usr/sbin/php-fpm8.0", "--nodaemonize"]
+CMD ["/usr/sbin/php-fpm8.0", "--nodaemonize"]
