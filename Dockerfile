@@ -10,4 +10,6 @@ RUN apt-get update \
 
 RUN mkdir -p /run/php
 
+COPY www.conf /etc/php/8.0/fpm/pool.d/www.conf
+
 CMD ["/usr/sbin/php-fpm8.0", "--nodaemonize"]
