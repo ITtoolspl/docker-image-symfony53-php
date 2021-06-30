@@ -13,4 +13,10 @@ RUN mkdir -p /run/php
 
 COPY www.conf /etc/php/8.0/fpm/pool.d/www.conf
 
+RUN touch /var/log/php8.0-fpm.log
+RUN chown jakub /var/log/php8.0-fpm.log
+RUN chown -R jakub /run/php/
+
+USER jakub
+
 CMD ["/usr/sbin/php-fpm8.0", "--nodaemonize"]
